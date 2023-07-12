@@ -4,6 +4,8 @@ import ptBR from "date-fns/locale/pt-BR";
 import { HistoryContainer, Historylist, Status } from "./styles";
 import { CyclesContext } from "../../contexts/CyclesContext";
 
+
+
 const History = () => {
   const { cycles } = useContext(CyclesContext);
 
@@ -35,15 +37,15 @@ const History = () => {
                   </td>
                   <td>
                     {cycle.finishedDate && (
-                      <Status statuscolor="green">Concluido</Status>
+                      <Status $statuscolor="green">Concluido</Status>
                     )}
 
                     {cycle.interrupedDate && (
-                      <Status statuscolor="red">Interrompido</Status>
+                      <Status $statuscolor="red">Interrompido</Status>
                     )}
 
                     {!cycle.interrupedDate && !cycle.finishedDate && (
-                      <Status statuscolor="yellow">Andamento</Status>
+                      <Status $statuscolor="yellow">Andamento</Status>
                     )}
                   </td>
                 </tr>
